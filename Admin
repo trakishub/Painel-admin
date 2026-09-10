@@ -97,10 +97,10 @@ end
 getgenv().KitKatConfig = {
     AuthorizedPlayersURL = "https://raw.githubusercontent.com/trakishub/Admin/refs/heads/main/README.md",
     SpecialTags = {
-        ["Hey_zPUDIM"] = "Dono KitK4t",
-        ["RUANRODRIGO121121"] = "Dono Do KitK4t",
-        ["aaaaa"] = "Lider KitK4t",
-        ["lushmart"]  = "Dono Do KitK4t"
+        ["Hey_zPUDIM"] = "Dono do trakis",
+        ["aaaaaaa"] = "Dono Do trakis",
+        ["77777"] = "Lider trakis",
+        ["7777"]  = "Dono Do KitK4t"
     }
 }
 
@@ -1919,7 +1919,7 @@ if BoardLabel then
         end
     end)
 else
-    warn("[KitK4t Hub] BoardLabel não foi encontrado, comandos pelo quadro desativados.")
+    warn("[Trakisi Hub] BoardLabel não foi encontrado, comandos pelo quadro desativados.")
 end
 
 -- ================================
@@ -1942,7 +1942,7 @@ end
 
 print("✅ Usuário autorizado: " .. LocalPlayer.Name)
 print("✅ Cargo: " .. GetCargo(LocalPlayer.Name))
-print("✅ Carregando KitK4t Hub Admin...")
+print("✅ Carregando Trakis Hub Admin...")
 
 -- ================================
 -- CARREGAR WINDUI
@@ -1960,7 +1960,7 @@ end)
 if success and result then
     WindUI = result
 else
-    warn("[KitK4t Hub] Falha ao carregar WindUI.")
+    warn("[Trakid Hub] Falha ao carregar WindUI.")
     warn(result)
     return
 end
@@ -1981,10 +1981,10 @@ local Avatar = Players:GetUserThumbnailAsync(
 -- CRIAR JANELA
 -- ================================
 local Window = WindUI:CreateWindow({
-    Title = "KitK4t Hub Admin",
+    Title = "Trakis Admin",
     Icon = "shield",
-    Author = "Bazuka",
-    Folder = "KitK4tHub",
+    Author = "cafezin and vitin",
+    Folder = "TrakisHub",
     Size = UDim2.fromOffset(300, 300),
     Transparent = true,
     Theme = "Dark",
