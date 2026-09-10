@@ -63,7 +63,7 @@ local Words =
 local BoardLabel = Words:FindFirstChildWhichIsA("TextLabel", true)
 
 if not BoardLabel then
-    warn("[KitK4t Hub] TextLabel do quadro não encontrado. Aguardando carregar...")
+    warn("[trakis Hub] TextLabel do quadro não encontrado. Aguardando carregar...")
     repeat
         task.wait(0.25)
         BoardLabel = Words:FindFirstChildWhichIsA("TextLabel", true)
@@ -247,7 +247,7 @@ end))
 
 -- Variáveis globais do sistema
 local TEMP_MODS = {}
-local KitK4t_USERS = {}
+local Trakis_USERS = {}
 local playerOriginalSpeed = {}
 local CASTIGO_PLAYERS = {}
 local INVISIBLE_JAILED_PLAYERS = {}
@@ -263,7 +263,7 @@ local jailConnections = {}
 -- ================================
 local function CriarAnuncioBonito(remetente, texto)
     local screenGui = Instance.new("ScreenGui")
-    screenGui.Name = "KitK4tAnnouncement"
+    screenGui.Name = "TrakisAnnouncement"
     screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     screenGui.DisplayOrder = 999
     screenGui.IgnoreGuiInset = true
@@ -1919,7 +1919,7 @@ if BoardLabel then
         end
     end)
 else
-    warn("[Trakisi Hub] BoardLabel não foi encontrado, comandos pelo quadro desativados.")
+    warn("[Trakis Hub] BoardLabel não foi encontrado, comandos pelo quadro desativados.")
 end
 
 -- ================================
@@ -1931,11 +1931,11 @@ local LocalPlayer = Players.LocalPlayer
 -- ================================
 -- WINDUI - INTERFACE
 -- ================================
-KitK4t_USERS = KitK4t_USERS or {}
-KitK4t_USERS[LocalPlayer.Name] = true
+Trakis_USERS = Trakis_USERS or {}
+Trakis_USERS[LocalPlayer.Name] = true
 
 if not IsPlayerAuthorized(LocalPlayer.Name) then
-    warn("⚠️ Você não está autorizado a usar o KitK4t Hub Admin")
+    warn("⚠️ Você não está autorizado a usar o Trakis Hub Admin")
     warn("⚠️ Seu username: " .. LocalPlayer.Name)
     return
 end
@@ -2315,7 +2315,7 @@ TabMorphs:Button({ Title = "/goner", Desc = "Transforma no Goner com skin e sons
     if MorphTargetName ~= "" then EnviarBoard("goner", MorphTargetName) end
 end })
 
-print("✅ KitK4t Hub Admin carregado!")
+print("✅ Trakis Hub Admin carregado!")
 print("📌 Minimize a janela para ver o botão flutuante 'KitK4t HUB'")
 
 local sound = Instance.new("Sound")
