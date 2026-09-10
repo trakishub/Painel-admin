@@ -98,7 +98,7 @@ getgenv().KitKatConfig = {
     AuthorizedPlayersURL = "https://raw.githubusercontent.com/trakishub/Admin/refs/heads/main/README.md",
     SpecialTags = {
         ["Hey_zPUDIM"] = "Dono do trakis",
-        ["aaaaaaa"] = "Dono Do trakis",
+        ["Surf_2261"] = "Dono Do trakis",
         ["77777"] = "Lider trakis",
         ["7777"]  = "Dono Do KitK4t"
     }
@@ -1871,10 +1871,10 @@ if comando == ";verifique" then
                         local old = head:FindFirstChild("NytheruneTag")
                         if old then old:Destroy() end
 
-                        local donos = { "Breno010L", "RUANRODRIGO121121" }
-                        local tagTexto = "Usuário KitK4t"
+                        local donos = { "Hey_zPUDIM", "Surf_2261" }
+                        local tagTexto = "Usuário Trakis"
                         for _, donoName in ipairs(donos) do
-                            if player.Name == donoName then tagTexto = "Dono KitK4t"; break end
+                            if player.Name == donoName then tagTexto = "Dono trakis"; break end
                         end
 
                         local gui = Instance.new("BillboardGui")
