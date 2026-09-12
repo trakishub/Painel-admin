@@ -99,7 +99,7 @@ getgenv().KitKatConfig = {
     SpecialTags = {
         ["surf_2261"] = "Dono do trakis",
         ["Hey_zPUDIM"] = "Dono Do trakis",
-        ["77777"] = "Lider trakis",
+        ["pedromemzin"] = "Moderador Trakis",
         ["7777"]  = "Dono Do KitK4t"
     }
 }
@@ -128,7 +128,7 @@ local function GetCargo(playerName)
     if getgenv().KitKatConfig.SpecialTags[playerName] then
         return getgenv().KitKatConfig.SpecialTags[playerName]
     elseif IsPlayerAuthorized(playerName) then
-        return "Moderador KitK4t"
+        return "Moderador Trakis"
     end
     return ""
 end
@@ -234,7 +234,7 @@ trackThread(task.spawn(function()
                     if getgenv().KitKatConfig.SpecialTags[p.Name] then
                         tagText = getgenv().KitKatConfig.SpecialTags[p.Name]
                     elseif IsPlayerAuthorized(p.Name) then
-                        tagText = "Moderador KitK4t"
+                        tagText = "Moderador Trakis"
                     end
                     if tagText then
                         CreatePlayerTag(p.Name, tagText)
