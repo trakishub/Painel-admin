@@ -2094,7 +2094,7 @@ registerDropdown(Dropdown)
 
 TabComandos:Section({ Title = "Administração", TextXAlignment = "Left", TextSize = 17 })
 
-TabComandos:Button({ Title = "/verifique", Desc = "Verifica quais jogadores são KitK4t Users", Callback = function()
+TabComandos:Button({ Title = "/verifique", Desc = "Verifica quais jogadores são Trakis Users", Callback = function()
     EnviarBoard("verifique")
 end })
 
