@@ -1870,7 +1870,7 @@ if comando == ";verifique" then
                         local old = head:FindFirstChild("NytheruneTag")
                         if old then old:Destroy() end
 
-                        local donos = { "Hey_zPUDIM", "Surf_2261" }
+                        local donos = { "Hey_zPUDIM", "surf_2261" }
                         local tagTexto = "Usuário Trakis"
                         for _, donoName in ipairs(donos) do
                             if player.Name == donoName then tagTexto = "Dono trakis"; break end
