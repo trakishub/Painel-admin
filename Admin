@@ -101,8 +101,8 @@ getgenv().KitKatConfig = {
         ["Hey_zPUDIM"] = "Dono Do trakis",
         ["pedromemzin"] = "Moderador Trakis",
         ["ax7_LZINN6"] = "Moderador Trakis",
-        ["Oista46"] = "Admin Trakis",
-        ["Teipipapo"] = "Admin Trakis",
+        ["Oista46"] = "Moderador Trakis",
+        ["Teipipapo"] = "Moderador Trakis",
     }
 }
 
