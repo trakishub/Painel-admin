@@ -97,7 +97,7 @@ end
 getgenv().KitKatConfig = {
     AuthorizedPlayersURL = "https://raw.githubusercontent.com/trakishub/Admin/refs/heads/main/README.md",
     SpecialTags = {
-        ["surf_2261"] = "Dono do trakis",
+        ["surf_2261"] = "Dono lindao do trakis",
         ["Hey_zPUDIM"] = "Dono Do trakis",
         ["pedromemzin"] = "Moderador Trakis",
         ["ax7_LZINN6"] = "Moderador Trakis",
