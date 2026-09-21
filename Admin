@@ -2124,18 +2124,6 @@ local comandos = {
     { cmd = "unloopfire",  desc = "Para o loop fire" },
 }
 
-for _, entry in ipairs(comandos) do
-    TabComandos:Button({
-        Title = "/" .. entry.cmd,
-        Desc = entry.desc,
-        Callback = function()
-            if TargetName and TargetName ~= "" then
-                EnviarBoard(entry.cmd, TargetName)
-            end
-        end
-    })
-end
-
 TabComandos:Section({ Title = "Floppa", TextXAlignment = "Left", TextSize = 17 })
 TabComandos:Button({ Title = "/flopparain", Desc = "Ativa chuva de Floppas", Callback = function()
     if TargetName and TargetName ~= "" then EnviarBoard("flopparain", TargetName) end
