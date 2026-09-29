@@ -63,7 +63,7 @@ local Words =
 local BoardLabel = Words:FindFirstChildWhichIsA("TextLabel", true)
 
 if not BoardLabel then
-    warn("[trakis Hub] TextLabel do quadro não encontrado. Aguardando carregar...")
+    warn("[Vortex Hub] TextLabel do quadro não encontrado. Aguardando carregar...")
     repeat
         task.wait(0.25)
         BoardLabel = Words:FindFirstChildWhichIsA("TextLabel", true)
