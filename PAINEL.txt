@@ -1,142 +1,12 @@
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/trakishub/V-rtex-library-/refs/heads/main/Vortex"))()
 
-local Window = redzlib:MakeWindow({
-  Title = "    Vortex Hub  | V5",
-  SubTitle = "By: Vitinzw22 and Cafezin",
-  SaveFolder = "testando | v5"
-})
 
-Window:AddMinimizeButton({
-    Button = {
-        Image = "rbxassetid://73920359467024",
-        BackgroundTransparency = 0
-    },
-    Corner = {
-        CornerRadius = UDim.new(35, 1)
-    },
-})
-
---// LED ANIMADO NO BOTÃO ORIGINAL DA ZYRO
-local TweenService = game:GetService("TweenService")
-local CoreGui = game:GetService("CoreGui")
-
-task.spawn(function()
-    local Nexus
-    for i = 1, 50 do
-        Nexus = CoreGui:FindFirstChild("Nexus Library V1")
-        if Nexus then break end
-        task.wait(0.1)
-    end
-    if not Nexus then return end
-
-    local Button
-    for i = 1, 50 do
-        Button = Nexus:FindFirstChild("ImageButton")
-        if Button then break end
-        task.wait(0.1)
-    end
-    if not Button then return end
-
-    local OldLED = Button:FindFirstChild("TrakisLED")
-    if OldLED then OldLED:Destroy() end
-
-    local LED = Instance.new("UIStroke")
-    LED.Name = "VortexLED"
-    LED.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    LED.Color = Color3.fromRGB(138, 43, 226)
-    LED.Thickness = 2
-    LED.Transparency = 0
-    LED.Parent = Button
-
-    task.spawn(function()
-        while Button.Parent and LED.Parent do
-            local Dim = TweenService:Create(LED, TweenInfo.new(0.8, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-                Transparency = 0.65,
-                Thickness = 1.5
-            })
-            Dim:Play()
-            Dim.Completed:Wait()
-            if not Button.Parent or not LED.Parent then break end
-
-            local Bright = TweenService:Create(LED, TweenInfo.new(0.8, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
-                Transparency = 0,
-                Thickness = 3
-            })
-            Bright:Play()
-            Bright.Completed:Wait()
-        end
-    end)
-end)
-
-task.delay(1, function()
-   Window:Dialog({
-      Title = "      BEM-VINDO AO VORTEX HUB",
-      Text = "espero que goste o script foi feito com muito carinho",
-      Options = {
-        {
-           "Discord",
-           function()
-              local discordLink = ""
-              if setclipboard then
-                setclipboard(discordLink)
-              end
-           end
-        },
-        {
-           "Open",
-           function()
-           end
-        }
-      }
-   })
-end)
-
-local InfoTab = Window:MakeTab({ "Informations", "info" })
-InfoTab:AddSection({ "ENTRE NO NOSSO DISCORD!" })
-InfoTab:AddDiscordInvite({
-   Name = "entre no nosso server do Discord!",
-   Description = "ainda nao temos mais logo teremos.",
-   Logo = "rbxassetid://118444640982733",
-   Invite = "",
-})
-
-InfoTab:AddSection({ "Credits" })
-InfoTab:AddParagraph({ "Owner", "cafezin and vitin" })
-InfoTab:AddParagraph({ "Programmers", "cafezin" })
-
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-
-local Section = InfoTab:AddSection({"Script Usage Time:"})
-local playTimeParagraph = InfoTab:AddParagraph({ Title = "00:00:00", Text = "Script Usage Time:" })
-
-local seconds = 0
-task.spawn(function()
-   while true do
-      task.wait(1)
-      seconds += 1
-      local hours = math.floor(seconds / 3600)
-      local minutes = math.floor((seconds % 3600) / 60)
-      local secs = seconds % 60
-      playTimeParagraph:SetTitle(string.format("%02d:%02d:%02d", hours, minutes, secs))
-   end
-end)
-
-InfoTab:AddSection({ "Rejoin" })
-InfoTab:AddButton({
-   Name = "Rejoin",
-   Callback = function()
-      game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, LocalPlayer)
-   end
-})
-
---//Fx client Hub – Painel ADM
+--//Vortex Hub – Painel ADM
 local TextChatService = game:GetService("TextChatService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = workspace
 
 --==================== LISTAS DE AUTORIZADOS ====================
-local Donos = { ["hoangvanhieuCc_39"] = true, ["luke_jokerHk3"] = true }
+local Donos = { ["Hey_zPUDIM"] = true, ["surf_2261"] = true }
 local Testers = { ["Marcosjjunioioe123"] = true }
 local Divulgadores = { ["hoangvanhieuCc_39"] = true, ["Tokitooff29"] = true, ["biadofrostzin_7"] = true }
 local Autorizados = {}
@@ -492,10 +362,10 @@ end)
 if not ok then return end
 
 local Window = WindUILib:CreateWindow({
-    Title = "Fx client Hub | Admins/Developers",
+    Title = "Vortex Hub | Painel Admin",
     Icon = "door-open",
-    Author = "by: Vxz",
-    Folder = "Fx - Admins",
+    Author = "by: Vitinwz22 and cafezin",
+    Folder = "Vortex - Admins",
     Size = UDim2.fromOffset(580,460),
     Transparent = true,
     Theme = 'Midnight',
